@@ -19,8 +19,8 @@ import {useDispatch} from 'react-redux'
 import {useNavigate} from "react-router-dom"
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 
@@ -218,14 +218,14 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                   <LinkRouter className="Linkrouter-short" to={page.to}>
+                  <LinkRouter className="Linkrouter-short" to={page.to}>
               {page.name}
             </LinkRouter>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-         
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
                   <Button
@@ -353,7 +353,7 @@ const Header = () => {
                     fill="rgb(105,24,152)"
                     className="userr"
                     viewBox="0 0 16 16"
-                   >
+                  >
                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                   </svg>
                 </LinkRouter>}
@@ -378,7 +378,7 @@ const Header = () => {
               {user ? (
                 <Box>
                   <LinkRouter to={`/profile/${user.user?.id}`}>
-                 {/*    <MenuItem sx={{'&:hover': {bgcolor: 'rgb(224,224,224)'}}} onClick={handleCloseUserMenu}>
+                {/*    <MenuItem sx={{'&:hover': {bgcolor: 'rgb(224,224,224)'}}} onClick={handleCloseUserMenu}>
                       <Typography sx={{padding: '2px', paddingLeft: '6px', paddingRight: '6px', color: 'rgb(2,0,3)'}}>{user.user?.name.charAt(0).toUpperCase()+user.user?.name.slice(1).toLowerCase()}</Typography>
                     </MenuItem> */}
                   </LinkRouter>
@@ -388,14 +388,14 @@ const Header = () => {
                 </Box>
               ) : 
                 <LinkRouter to="/login">
-   {/*       <svg
+  {/*       <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="25"
                 fill="#535353"
                 className="bi bi-person pxz__20 black"
                 viewBox="0 0 16 16"
-               >
+              >
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
               </svg> */}
                 </LinkRouter>
@@ -411,7 +411,7 @@ const Header = () => {
                 fill="#535353"
                 className="bi bi-person pxz__20 black"
                 viewBox="0 0 16 16"
-               >
+              >
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
               </svg>
             </LinkRouter>
